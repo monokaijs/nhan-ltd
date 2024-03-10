@@ -1,5 +1,5 @@
-import Section from "@/components/section";
-import AppLink from "@/components/app-link";
+import Section from "@/components/shared/section";
+import AppLink from "@/components/shared/app-link";
 import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 export default function Projects() {

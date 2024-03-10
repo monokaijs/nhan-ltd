@@ -1,5 +1,5 @@
-import Section from "@/components/section";
-import {Accordion, AccordionItem} from "@/components/collapsible";
+import Section from "@/components/shared/section";
+import {Accordion, AccordionItem} from "@/components/shared/collapsible";
 
 export default function Experience() {
   return <Section

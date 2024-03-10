@@ -1,6 +1,7 @@
-import Section from "@/components/section";
-import AppLink from "@/components/app-link";
-import {ArrowRightIcon} from "@heroicons/react/24/outline";
+import Section from "@/components/shared/section";
+import AppLink from "@/components/shared/app-link";
+import {ArrowRightIcon, BookmarkIcon} from "@heroicons/react/24/outline";
+import {EmailMe} from "@/app/sections/contact-link";
 
 export default function Summary() {
   return <Section>
@@ -19,9 +20,14 @@ export default function Summary() {
       </p>
       <div className="flex gap-x-6 mt-2 items-center">
         <AppLink href="/about" variant="route">
-          Learn a bit more
+          About me
           <ArrowRightIcon className={'h-3 w-3'}/>
         </AppLink>
+        <AppLink href="/articles" variant="route">
+          My Articles
+          <BookmarkIcon className={'h-3 w-3'}/>
+        </AppLink>
+        <EmailMe title={'Email me'}/>
       </div>
     </div>
   </Section>
