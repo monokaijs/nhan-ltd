@@ -22,14 +22,18 @@ const config: Config = {
     colors: {
       gray: generateScale("gray"),
       accent: "#B3FC03",
+      transparent: 'transparent',
     },
     fontSize: {
       sm: "0.75rem",
       base: "0.875rem",
+      lg: "1.224rem"
     },
     borderRadius: {
       sm: "1px",
       md: "2px",
+      lg: "4px",
+      xl: "8px",
       full: "9999px",
     },
     extend: {

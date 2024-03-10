@@ -26,8 +26,8 @@ export default function RootLayout({children}: PropsWithChildren) {
   return (
     <html lang="en">
 
-    <body className={cn(appFont.className, "p-4 py-10 md:p-12 bg")}>
-    {children}
+    <body className={cn(appFont.className, "bg")}>
+      {children}
     </body>
     </html>
   );
