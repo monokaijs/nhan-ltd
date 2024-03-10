@@ -9,7 +9,7 @@ interface BlogFeedProps {
 
 export default function BlogFeed({posts}: BlogFeedProps) {
   return <Section heading="Blog">
-    <ul className="flex flex-col gap-y-2">
+    <ul className="flex flex-col gap-y-3">
       {(posts || []).map(post => (
         <>
           <li key={post._id} className={'group cursor-pointer'}>
