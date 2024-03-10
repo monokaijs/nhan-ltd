@@ -2,17 +2,19 @@ import Section from "@/components/shared/section";
 import AppLink from "@/components/shared/app-link";
 import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 import {ArrowRightIcon, ClockIcon, HeartIcon, ShareIcon} from "@heroicons/react/24/outline";
+import {Fragment} from "react";
 
 interface BlogFeedProps {
+  heading?: string;
   posts?: BlogPost[];
 }
 
-export default function BlogFeed({posts}: BlogFeedProps) {
-  return <Section heading="Blog">
+export default function BlogFeed({heading, posts}: BlogFeedProps) {
+  return <Section heading={heading || 'Blog'}>
     <ul className="flex flex-col gap-y-3">
       {(posts || []).map(post => (
-        <>
-          <li key={post._id} className={'group cursor-pointer'}>
+        <Fragment key={post._id}>
+          <li className={'group cursor-pointer'}>
             <div className={'flex justify-between'}>
               <div className={'font-bold'}>
                 {post.title}
@@ -39,13 +41,13 @@ export default function BlogFeed({posts}: BlogFeedProps) {
               &#x2022;
               <div className={'flex flex-row gap-x-1'}>
                 {post.hashtags.map(tag => {
-                  return <a className={'hover:text-accent'}>#{tag}</a>;
+                  return <a key={tag} className={'hover:text-accent'}>#{tag}</a>;
                 })}
               </div>
             </div>
           </li>
           <div className="h-px bg-gray-12 w-full mx-auto"/>
-        </>
+        </Fragment>
       ))}
     </ul>
   </Section>;
