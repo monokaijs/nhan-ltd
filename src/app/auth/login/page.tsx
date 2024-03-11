@@ -15,7 +15,7 @@ export default function LoginPage() {
         Sign In
       </div>
       <div className={'text-sm mt-1 text-gray-9'}>
-        Sign in to access more features on this website. You don't have account?
+        Sign in to access more features on this website. You don't have account?{' '}
         <AppLink href={'/auth/register'}>Create new account</AppLink>.
       </div>
       <form
@@ -53,19 +53,19 @@ export default function LoginPage() {
       </div>
       <div className={'flex flex-col gap-2'}>
         <button
-          className={'group text-sm px-2 py-1 border border-gray-12 w-full -mx-2 box-content hover:bg-accent hover:border-accent hover:text-gray-12 flex flex-row justify-center gap-2 items-center'}
+          className={'group text-sm px-2 py-1 border border-solid border-gray-12 cursor-pointer w-full -mx-2 hover:bg-accent hover:border-accent hover:text-gray-12 flex flex-row justify-center gap-2 items-center'}
         >
           <GoogleIcon className={'fill-accent group-hover:fill-gray-12 w-2.5 h-2.5'}/>
-          <span>Continue with Google</span>
+          Continue with Google
         </button>
         <button
-          className={'group text-sm px-2 py-1 border border-gray-12 w-full -mx-2 box-content hover:bg-accent hover:border-accent hover:text-gray-12 flex flex-row justify-center gap-2 items-center'}
+          className={'group text-sm px-2 py-1 border border-solid border-gray-12 cursor-pointer w-full -mx-2 box-content hover:bg-accent hover:border-accent hover:text-gray-12 flex flex-row justify-center gap-2 items-center'}
         >
           <GitHubIcon className={'fill-accent group-hover:fill-gray-12 w-2.5 h-2.5'}/>
           Continue with GitHub
         </button>
         <button
-          className={'group text-sm px-2 py-1 border border-gray-12 w-full -mx-2 box-content hover:bg-accent hover:border-accent hover:text-gray-12 flex flex-row justify-center gap-2 items-center'}
+          className={'group text-sm px-2 py-1 border border-solid border-gray-12 cursor-pointer w-full -mx-2 box-content hover:bg-accent hover:border-accent hover:text-gray-12 flex flex-row justify-center gap-2 items-center'}
         >
           <GitLabIcon className={'fill-accent group-hover:fill-gray-12 w-2.5 h-2.5'}/>
           Continue with GitLab

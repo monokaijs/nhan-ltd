@@ -16,7 +16,6 @@ export default function Summary() {
       <p>
         I love to craft creative products and solve real life pain-point with my IT skill.
         I have a wide-range technology knowledge with multiple engineering skill-set.
-        I'm also interested in musical instruments and love to cycling around.
       </p>
       <div className="flex gap-x-6 mt-2 items-center">
         <AppLink href="/about" variant="route">
