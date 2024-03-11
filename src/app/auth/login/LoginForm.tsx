@@ -36,7 +36,7 @@ export default function LoginForm() {
       </div>
       {message && (
         <div
-          className={'animate-in fade-in duration-500 mt-4 bg-accent text-gray-12 py-2 px-4 pr-2 -mx-2 text-sm flex flex-row items-center gap-1'}>
+          className={'animate-in fade-in duration-500 mt-4 border border-solid border-gray-12 hover:border-accent py-2 px-4 pr-2 -mx-2 text-sm flex flex-row items-center gap-1'}>
           <BellAlertIcon className={'w-4 h-4'}/>
           <div className={'flex flex-col ml-2'}>
             <div className={'font-bold'}>
