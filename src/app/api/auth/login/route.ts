@@ -1,10 +1,10 @@
 import {NextRequest, NextResponse} from "next/server";
 import {AccountModel} from "@/lib/models/account.model";
 import {compareSync} from "bcryptjs";
-import {dbService} from "@/lib/services/db.service";
+import {getSession} from "@/lib/utils/getSession";
 
 export async function POST(res: NextRequest) {
-  await dbService.connect();
+  const session = await getSession();
   const body = await res.json();
   const {email, password} = body;
   if (!email || !password) return NextResponse.json({
@@ -17,7 +17,7 @@ export async function POST(res: NextRequest) {
     $or: [{
       email
     }, {
-      email: email
+      username: email
     }]
   });
   if (!account) return NextResponse.json({
@@ -28,6 +28,9 @@ export async function POST(res: NextRequest) {
     error: true,
     message: "Invalid password",
   });
+  session.loggedIn = true;
+  session.account = account;
+  await session.save();
   return NextResponse.json({
     error: false,
     message: `Successfully logged in`
