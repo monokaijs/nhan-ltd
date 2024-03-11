@@ -1,8 +1,10 @@
 import {NextRequest, NextResponse} from "next/server";
 import {AccountModel} from "@/lib/models/account.model";
 import {compareSync} from "bcryptjs";
+import {dbService} from "@/lib/services/db.service";
 
 export async function POST(res: NextRequest) {
+  await dbService.connect();
   const body = await res.json();
   const {email, password} = body;
   if (!email || !password) return NextResponse.json({

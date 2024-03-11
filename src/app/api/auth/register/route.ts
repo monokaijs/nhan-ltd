@@ -1,8 +1,10 @@
 import {NextRequest, NextResponse} from "next/server";
 import {AccountModel} from "@/lib/models/account.model";
 import {hashSync} from "bcryptjs";
+import {dbService} from "@/lib/services/db.service";
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
+  await dbService.connect();
   const data = await req.json();
   const {username, email, password} = data;
   if (!username || !email || !password) return NextResponse.json({
