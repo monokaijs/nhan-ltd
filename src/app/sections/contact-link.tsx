@@ -4,7 +4,7 @@ import React, {ReactNode} from "react";
 import {Slot} from "@radix-ui/react-slot";
 
 import {DocumentDuplicateIcon} from "@heroicons/react/24/outline";
-import {cn} from "@/utils";
+import {cn} from "@/lib/utils";
 import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 export const ContactCopyItem = ({title, copy}: { title: string, copy: string }) => {

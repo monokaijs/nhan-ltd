@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {cva} from "class-variance-authority";
-import {cn} from "@/utils";
+import {cn} from "@/lib/utils";
 import {ReactNode} from "react";
 
 export const link = cva(["flex", "items-center", "gap-x-0.5", "w-fit"], {

@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {Manrope} from "next/font/google";
 import "./globals.css";
-import {cn} from "@/utils";
+import {cn} from "../lib/utils";
 import {PropsWithChildren} from "react";
 
 const appFont = Manrope({subsets: ["latin"]});
