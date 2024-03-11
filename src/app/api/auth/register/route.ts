@@ -28,6 +28,13 @@ export async function POST(req: NextRequest, res: NextResponse) {
     status: 400,
   });
 
+  if (username.trim().length < 6 || username.trim().length > 30) return NextResponse.json({
+    error: true,
+    message: "Username is too short or too long"
+  }, {
+    status: 400,
+  });
+
   if (password.length < 8) return NextResponse.json({
     error: true,
     message: "Password requires at least 8 characters",
