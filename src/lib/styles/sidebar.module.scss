@@ -1,0 +1,32 @@
+.sidebar {
+  @apply w-64 h-screen sm:translate-x-0 ml-0 bg-gray-12;
+
+  transition: all 200ms ease-in-out;
+
+  .backdrop {
+    @apply relative;
+    @media (max-width: 640px) {
+      @apply fixed left-0 top-0 right-0 bottom-0;
+      display: none;
+      background-color: #00000044;
+    }
+  }
+
+  &.collapsed {
+    @apply -ml-64;
+
+    .backdrop {
+      display: block;
+    }
+  }
+
+
+  @media (max-width: 960px) {
+    @apply fixed left-0 top-0 z-50 -ml-64;
+
+    &.collapsed {
+      @apply ml-0;
+    }
+  }
+
+}
