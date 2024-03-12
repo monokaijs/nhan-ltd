@@ -1,9 +1,9 @@
 "use client";
 import AppLink from "@/components/shared/app-link";
 import {ArrowPathIcon, ArrowRightIcon, BellAlertIcon} from "@heroicons/react/24/outline";
-import GoogleIcon from "@/app/assets/icons/GoogleIcon";
-import GitHubIcon from "@/app/assets/icons/GitHubIcon";
-import GitLabIcon from "@/app/assets/icons/GitLabIcon";
+import GoogleIcon from "@/assets/icons/GoogleIcon";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
+import GitLabIcon from "@/assets/icons/GitLabIcon";
 import {useState} from "react";
 
 export default function LoginForm() {
